@@ -1,0 +1,15 @@
+[
+    {
+        "id": "1",
+        "title": {
+            "ar": "عنوان",
+            "en": "Title"
+        },
+        "content": {
+            "ar": "<p>محتوى<\/p>",
+            "en": "<p>Content<\/p>"
+        },
+        "image": "\/uploads\/a.jpg",
+        "date": "2026-05-17"
+    }
+]

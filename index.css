@@ -1,0 +1,200 @@
+:root {
+  --bg: #f8f6f2;
+  --surface: rgba(255, 255, 255, 0.90);
+  --surface-strong: rgba(15, 23, 42, 0.88);
+  --text: #111827;
+  --muted: #6b7280;
+  --accent: #ea580c;
+  --border: rgba(226, 232, 240, 0.75);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, rgba(234, 88, 12, 0.08), transparent 28%), var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+button,
+input,
+textarea,
+select {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.container {
+  width: min(100% - 2rem, 1280px);
+  margin-inline: auto;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+img,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(234, 88, 12, 0.45) transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.04);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(234, 88, 12, 0.45);
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(234, 88, 12, 0.7);
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.glass-nav {
+  background: rgba(15, 23, 42, 0.86);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-nav a,
+.glass-nav button {
+  color: inherit;
+}
+
+@supports ((-webkit-backdrop-filter: blur(18px)) or (backdrop-filter: blur(18px))) {
+  .glass-nav {
+    background: rgba(15, 23, 42, 0.72);
+  }
+}
+
+.page-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (max-width: 768px) {
+  .page-section {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+.animate-in {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: fade-in 0.7s ease-out forwards;
+}
+
+.animate-in.slide-in-from-bottom {
+  animation-name: slide-in-from-bottom;
+}
+
+.animate-in.slide-in-from-left {
+  animation-name: slide-in-from-left;
+}
+
+.animate-in.fade-in {
+  animation-name: fade-in;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-from-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-from-left {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fixed-bottom-widget {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media (max-width: 640px) {
+  .fixed-bottom-widget {
+    right: 0.75rem;
+    bottom: 0.75rem;
+  }
+}
+
+.content-panel {
+  background: var(--surface);
+  box-shadow: 0 30px 80px rgba(15, 23, 42, 0.12);
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 640px) {
+  .content-panel {
+    border-radius: 2rem;
+  }
+}

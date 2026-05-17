@@ -1,0 +1,18 @@
+{
+    "phone": "01000000000",
+    "whatsapp": "01000000000",
+    "logo": "\/uploads\/logo.png",
+    "address": {
+        "ar": "العنوان",
+        "en": "Address"
+    },
+    "heroTitle": {
+        "ar": "مرحبا",
+        "en": "Hello"
+    },
+    "heroSub": {
+        "ar": "نص فرعي",
+        "en": "Sub text"
+    },
+    "heroImage": "\/uploads\/hero.jpg"
+}

@@ -1,0 +1,9 @@
+[
+    {
+        "id": "test1",
+        "name": "User",
+        "email": "u@example.com",
+        "msg": "Hi",
+        "date": "2026-05-17"
+    }
+]
